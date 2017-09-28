@@ -1,0 +1,6 @@
+---
+
+- name: Restart httpd-openbsd
+  service:
+    name: httpd-openbsd
+    state: restarted

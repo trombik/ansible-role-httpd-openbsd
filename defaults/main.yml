@@ -1,0 +1,8 @@
+httpd-openbsd_user: httpd-openbsd
+httpd-openbsd_group: httpd-openbsd
+httpd-openbsd_log_dir: /var/log/httpd-openbsd
+httpd-openbsd_db_dir: "{{ __httpd-openbsd_db_dir }}"
+httpd-openbsd_service: httpd-openbsd
+httpd-openbsd_conf_dir: "{{ __httpd-openbsd_conf_dir }}"
+httpd-openbsd_conf_file: "{{ __httpd-openbsd_conf_dir }}/httpd-openbsd.conf"
+httpd-openbsd_flags: ""

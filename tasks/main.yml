@@ -1,0 +1,37 @@
+---
+# tasks file for ansible-role-httpd-openbsd
+
+- include_vars: "{{ ansible_os_family }}.yml"
+
+- include: "install-{{ ansible_os_family }}.yml"
+
+- name: Create log directory
+  file:
+    path: "{{ httpd-openbsd_log_dir }}"
+    mode: 0755
+    owner: "{{ httpd-openbsd_user }}"
+    group: "{{ httpd-openbsd_group }}"
+    state: directory
+  notify: Restart httpd-openbsd
+
+- name: Create db directory
+  file:
+    path: "{{ httpd-openbsd_db_dir }}"
+    mode: 0755
+    owner: "{{ httpd-openbsd_user }}"
+    group: "{{ httpd-openbsd_group }}"
+    state: directory
+  notify: Restart httpd-openbsd
+
+- name: Create httpd-openbsd.conf
+  template:
+    src: httpd-openbsd.conf.j2
+    dest: "{{ httpd-openbsd_conf_file }}"
+    validate: echo %s
+  notify: Restart httpd-openbsd
+
+- name: Start httpd-openbsd
+  service:
+    name: "{{ httpd-openbsd_service }}"
+    enabled: true
+    state: started

@@ -1,0 +1,6 @@
+---
+
+- name: Install httpd-openbsd
+  pkgng:
+    name: httpd-openbsd
+    state: present

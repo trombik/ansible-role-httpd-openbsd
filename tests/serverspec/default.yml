@@ -1,0 +1,5 @@
+- hosts: localhost
+  roles:
+    - ansible-role-httpd-openbsd
+  vars:
+    httpd-openbsd_config: ""
