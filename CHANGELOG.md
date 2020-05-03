@@ -1,3 +1,7 @@
+## Release 1.1.1
+
+* 362a6f8 bugfix: QA
+
 ## Release 1.1.0
 
 * 2798964 bugfix: ignore .pyc
