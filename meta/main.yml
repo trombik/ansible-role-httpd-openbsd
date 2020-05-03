@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: httpd_openbsd
   author: Tomoyuki Sakurai
   description: Configures httpd(8) from OpenBSD
   company: N/A

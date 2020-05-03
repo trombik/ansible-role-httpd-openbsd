@@ -1,4 +1,6 @@
-# ansible-role-httpd-openbsd
+# `trombik.httpd_openbsd`
+
+[![Build Status](https://travis-ci.org/trombik/ansible-role-httpd-openbsd.svg?branch=master)](https://travis-ci.org/trombik/ansible-role-httpd-openbsd)
 
 Manages `httpd(8)` from OpenBSD
 
@@ -49,6 +51,7 @@ None
 # Example Playbook
 
 ```yaml
+---
 - hosts: localhost
   roles:
     - ansible-role-httpd-openbsd
